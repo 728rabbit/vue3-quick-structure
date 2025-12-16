@@ -1,5 +1,23 @@
+/*
+Count.js
+export default {
+  data() {
+    return {
+      count: 0,
+    };
+  },
+  methods: {
+    incrementCount() {
+      this.count += 1;
+    },
+  },
+}; 
+*/
+
 <script>
 import { ref, reactive, computed, watch, onMounted, onBeforeUnmount, onUpdated } from 'vue';
+
+// import Count from './Count';
 
 export default {
   // ==============================
@@ -130,7 +148,7 @@ export default {
   // 混入 (Mixins)
   // ==============================
   mixins: [
-    // someMixin
+    // someMixin, e.g: Count
   ],
 
   // ==============================
@@ -144,7 +162,7 @@ export default {
   inject: ['parentData'],
 
   // ==============================
-  // 自訂事件 (emits)
+  // 自訂事件 (emits), 通常子傳給父組件數值
   // ==============================
   emits: ['update', 'delete'],
 
