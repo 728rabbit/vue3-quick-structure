@@ -41,6 +41,25 @@ export default {
     }
   },
 
+  // 使用 Composition 宣告變數要用 ref 來初始化，而這個 ref 必須要先 import 才可以使用。
+  // 使用 setup() {} 把變數放在此內部。
+  // 如果要宣告結構變數的話就必須要使用 reactive ，然後將變數放在裡面，而初始化的時候就不用 ref 了
+  setup() {
+    const name = ref('');
+    name.value = 'Jake';
+
+    const user = reactive({
+      id: 0,
+      name: '',
+    });
+    user.id = 1;
+    user.name = 'Allan';
+    
+    return {
+      name, user
+    };
+  },
+
   // ==============================
   // 組件內部資料 (data)
   // ==============================
