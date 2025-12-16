@@ -20,7 +20,7 @@ components：註冊子組件。
 
 directives：自訂 DOM 指令。
 
-mixins：共享功能到多個組件。
+mixins：把多個組件共用的邏輯（data、methods、computed、watch、生命週期等）抽出來，放進 mixin，組件再引入使用。
 
 provide / inject：跨層級傳遞資料。
 
