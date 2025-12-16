@@ -34,7 +34,7 @@ export default {
   },
 
   // ==============================
-  // 計算屬性 (computed)
+  // 計算屬性 (computed)， 只運行一次
   // ==============================
   computed: {
     doubleCount() {
